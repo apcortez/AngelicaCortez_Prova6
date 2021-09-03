@@ -66,7 +66,7 @@ namespace AngelicaCortez_Prova6.Client
             List<Policy> policies = mainBL.GetByType(type);
             foreach (var policy in policies)
             {
-                Console.WriteLine($"Polizza N.{policy.Id} \n{policy.Customer.FirstName}, {policy.Customer.LastName}\n");
+                Console.WriteLine($"Polizza N.{policy.PolicyNumber} \n{policy.Customer.FirstName}, {policy.Customer.LastName}\n");
             }
         }
 

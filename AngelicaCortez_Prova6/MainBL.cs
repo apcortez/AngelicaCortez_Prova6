@@ -46,6 +46,8 @@ namespace AngelicaCortez_Prova6
         {
             if (policy == null) throw new ArgumentNullException();
             _policyRepo.Update(policy);
+            Customer customerToUpdate = policy.Customer;
+            _clientRepo.Update(customerToUpdate);
         }
 
         internal List<Customer> FetchCustomers()

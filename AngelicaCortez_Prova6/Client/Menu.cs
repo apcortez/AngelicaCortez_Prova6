@@ -113,6 +113,7 @@ namespace AngelicaCortez_Prova6.Client
             Policy policyToUpdate = customer.Policies.ElementAt(polizzaScelto - 1);
             policyToUpdate.ExpirationDate = InsertExpDate();
             mainBL.UpdateCustomer(policyToUpdate);
+            
 
         }
 

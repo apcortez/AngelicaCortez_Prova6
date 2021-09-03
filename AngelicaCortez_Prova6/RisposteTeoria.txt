@@ -1,0 +1,59 @@
+﻿1. Cosa ci si aspetta dal seguente codice?
+try
+{
+ //codice che può scatenare o non scatenare un’eccezione
+}
+finally
+{
+ //altro codice
+}
+
+C) Indipendentemente dal verificarsi o meno di un'eccezione, le istruzioni nella 
+clausola finally verranno eseguite. 
+-------------------------------------------------------------------------------------------------
+
+2. Dopo aver osservato il seguente codice, selezionare le affermazioni vere.
+try
+{
+} 
+catch (Exception e) 
+{
+ 
+} 
+catch (ArithmeticException a) 
+{
+ 
+}
+
+B) Il primo blocco catch verrà raggiunto per primo e intercetterà eccezioni di 
+diversa natura, tra cui un’eventuale ArithmeticException 
+C) Qualora venga scatenata un’eccezione ArithmeticException, il secondo 
+blocco catch non sarà mai raggiunto. 
+
+--------------------------------------------------------------------------------------------------
+
+3. Quali affermazioni, riguardante il codice seguente, sono vere?
+using System;
+namespace Test6
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ int index = 6;
+Week 1
+ int[] myArray = new int[8];
+ try
+ {
+ myArray[index] = 10;
+ }
+ catch (IndexOutOfRangeException e)
+ {
+ Console.WriteLine("Fuori dal range");
+ }
+ Console.WriteLine("Fine del programma");
+ }
+ }
+}
+A) Il valore 10 sarà assegnato a myArray[6]. 
+D) L’output sarà: Fine del programma.
